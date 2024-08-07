@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8CCB5D, #F7F77F); /* Green gradient background */
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    width: calc(100% - 12px); /* Adjust width to fit padding */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li div {
+    display: flex;
+    gap: 10px;
+}
+
+li button {
+    background-color: #FFA07A; /* Light salmon color for buttons */
+    color: white;
+    border: none;
+}
+
+li button:hover {
+    background-color: #FF7F50; /* Coral color on hover */
+}
+
+#searchInput {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: calc(100% - 12px); /* Adjust width to fit padding */
+}
+
+#generateReport {
+    background-color: #87CEFA; /* Light sky blue color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#generateReport:hover {
+    background-color: #00BFFF; /* Deep sky blue color on hover */
+}
+
+#report {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
