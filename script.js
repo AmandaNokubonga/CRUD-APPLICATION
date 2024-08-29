@@ -1,7 +1,3 @@
-const registerForm = document.getElementById('registerForm');
-const registerDiv = document.getElementById('register');
-const loginForm = document.getElementById('loginForm');
-const loginDiv = document.getElementById('login');
 const app = document.getElementById('app');
 const addForm = document.getElementById('addForm');
 const itemList = document.getElementById('itemList');
@@ -24,36 +20,6 @@ let items = [
 ];
 
 let editingIndex = null;
-
-registerForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('regEmail').value;
-    const password = document.getElementById('regPassword').value;
-
-    // Store registered user in localStorage
-    localStorage.setItem('registeredEmail', email);
-    localStorage.setItem('registeredPassword', password);
-
-    alert('Registration successful! Please log in.');
-    registerDiv.classList.add('hidden');
-    loginDiv.classList.remove('hidden');
-});
-
-loginForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    const registeredEmail = localStorage.getItem('registeredEmail');
-    const registeredPassword = localStorage.getItem('registeredPassword');
-
-    if (email === registeredEmail && password === registeredPassword) {
-        loginDiv.classList.add('hidden');
-        app.classList.remove('hidden');
-    } else {
-        alert('Invalid email or password');
-    }
-});
 
 function renderItems(filteredItems = items) {
     itemList.innerHTML = '';
@@ -135,4 +101,5 @@ document.addEventListener('DOMContentLoaded', function() {
         items = JSON.parse(storedItems);
     }
     renderItems();
+    app.classList.remove('hidden');  // Show the app content immediately
 });
